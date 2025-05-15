@@ -2,231 +2,38 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>LinknRed | Membresía NFT 2025</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet" />
-  <style>
-    /* Reset y tipografía */
-    * {
-      margin: 0; padding: 0; box-sizing: border-box;
-    }
-    body {
-      font-family: 'Poppins', sans-serif;
-      background: linear-gradient(135deg, #0D0C1D 0%, #3E0D14 100%);
-      color: #eee;
-      line-height: 1.6;
-    }
-    a {
-      color: #e63946;
-      text-decoration: none;
-    }
-    a:hover {
-      text-decoration: underline;
-    }
-
-    header {
-      position: fixed;
-      top: 0; left: 0; right: 0;
-      background: rgba(13, 12, 29, 0.95);
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 1rem 2rem;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.8);
-      z-index: 1000;
-    }
-    header h1 {
-      font-weight: 700;
-      font-size: 1.5rem;
-      color: #e63946;
-      letter-spacing: 2px;
-      cursor: default;
-    }
-    nav a {
-      margin-left: 2rem;
-      font-weight: 600;
-      font-size: 1rem;
-      transition: color 0.3s ease;
-    }
-    nav a:hover {
-      color: #f1faee;
-    }
-
-    main {
-      margin-top: 80px;
-      max-width: 900px;
-      margin-left: auto;
-      margin-right: auto;
-      padding: 1rem 2rem 4rem 2rem;
-      text-align: center;
-    }
-    main h2 {
-      font-size: 2.5rem;
-      margin-bottom: 1rem;
-      color: #e63946;
-      text-shadow: 0 0 5px #e63946aa;
-    }
-    main p.intro {
-      font-size: 1.2rem;
-      margin-bottom: 2rem;
-      color: #ccc;
-    }
-
-    button.btn-connect {
-      background: #e63946;
-      border: none;
-      color: #fff;
-      padding: 1rem 2rem;
-      font-size: 1.1rem;
-      border-radius: 50px;
-      cursor: pointer;
-      transition: background 0.3s ease, transform 0.3s ease;
-      box-shadow: 0 5px 15px #e63946aa;
-    }
-    button.btn-connect:hover {
-      background: #a32832;
-      transform: scale(1.05);
-      box-shadow: 0 8px 20px #a32832cc;
-    }
-
-    section.features {
-      margin-top: 4rem;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 2rem;
-    }
-    .feature-card {
-      background: #1c1b2a;
-      border-radius: 15px;
-      padding: 1.8rem 1.5rem;
-      box-shadow: 0 0 20px #e63946bb;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-    .feature-card:hover {
-      transform: translateY(-10px);
-      box-shadow: 0 0 30px #f1faeecc;
-    }
-    .feature-card h3 {
-      color: #e63946;
-      margin-bottom: 1rem;
-      font-size: 1.3rem;
-    }
-    .feature-card p {
-      color: #ddd;
-      font-size: 1rem;
-      line-height: 1.4;
-    }
-
-    footer {
-      background: #0b0a14;
-      padding: 1.5rem 2rem;
-      text-align: center;
-      color: #555;
-      font-size: 0.9rem;
-      border-top: 1px solid #222;
-    }
-    footer a {
-      color: #e63946;
-      margin: 0 0.5rem;
-      font-weight: 600;
-    }
-    footer a:hover {
-      text-decoration: underline;
-    }
-
-    /* Animaciones */
-    [data-animate] {
-      opacity: 0;
-      transform: translateY(20px);
-      transition: all 0.6s ease-out;
-    }
-    [data-animate].visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    @media (max-width: 600px) {
-      main h2 {
-        font-size: 2rem;
-      }
-      button.btn-connect {
-        width: 100%;
-        font-size: 1rem;
-      }
-    }
-  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LinknRed - Plataforma NFT</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <header>
+    <h1>Bienvenido a LinknRed</h1>
+    <p>La nueva forma de conectar a través de NFTs</p>
+    <a href="#contacto" class="cta-button">Contáctanos</a>
+  </header>
 
-<header>
-  <h1>LinknRed</h1>
-  <nav>
-    <a href="#features">Beneficios</a>
-    <a href="#buy">Comprar</a>
-    <a href="https://linknred.com" target="_blank" rel="noopener">Sitio Oficial</a>
-  </nav>
-</header>
-
-<main>
-  <h2 data-animate>¡Únete a LinknRed | Membresía NFT 2025!</h2>
-  <p class="intro" data-animate>
-    Sé parte del ecosistema colaborativo que impulsa el comercio P2P sin intermediarios, con pagos en <strong>$TRX</strong> a través de <strong>TronLink Wallet</strong>.
-    Membresía válida por 12 meses.
-  </p>
-
-  <button class="btn-connect" id="btnConnect" data-animate>Conectar TronLink Wallet</button>
-
-  <section id="features" class="features" aria-label="Beneficios de la membresía">
-    <div class="feature-card" data-animate>
-      <h3>Tu tienda en línea personalizada</h3>
-      <p>www.linknred.com/tuempresa — Lista de productos y catálogo exclusivo para socios.</p>
-    </div>
-    <div class="feature-card" data-animate>
-      <h3>Comercio directo P2P</h3>
-      <p>Sin intermediarios ni costos adicionales en transacciones, más rentabilidad para ti.</p>
-    </div>
-    <div class="feature-card" data-animate>
-      <h3>Acceso a programas de lealtad</h3>
-      <p>Recompensas y beneficios exclusivos para miembros activos.</p>
-    </div>
-    <div class="feature-card" data-animate>
-      <h3>Soporte y capacitación</h3>
-      <p>Asistencia continua para ayudarte a sacar el máximo provecho a la plataforma.</p>
-    </div>
+  <section class="info">
+    <h2>¿Qué es LinknRed?</h2>
+    <p>Una plataforma P2P basada en tecnología NFT y Blockchain que reduce la intermediación en operaciones comerciales.</p>
   </section>
 
-  <section id="buy" style="margin-top: 3rem;">
-    <p style="font-weight: 700; font-size: 1.2rem; margin-bottom: 1rem;" data-animate>Precio: <span style="color:#e63946;">600 USDT / anual</span></p>
-    <!-- Aquí agregaremos luego la integración real para comprar -->
+  <section class="beneficios">
+    <h2>Beneficios</h2>
+    <ul>
+      <li>✔ Plataforma descentralizada</li>
+      <li>✔ Transacciones seguras</li>
+      <li>✔ Conexión directa entre usuarios</li>
+    </ul>
   </section>
-</main>
 
-<footer>
-  <p>© 2025 LinknRed by Ennovasol. Todos los derechos reservados.</p>
-  <p>
-    <a href="https://www.linkedin.com/company/linknred" target="_blank" rel="noopener">LinkedIn</a> |
-    <a href="https://twitter.com/linknred" target="_blank" rel="noopener">Twitter</a>
-  </p>
-</footer>
+  <section id="contacto">
+    <h2>¿Quieres más información?</h2>
+    <p>Escríbenos a contacto@linknred.com</p>
+  </section>
 
-<script>
-  // Animaciones de entrada al hacer scroll
-  function onScrollAnimate() {
-    document.querySelectorAll('[data-animate]').forEach(el => {
-      const rect = el.getBoundingClientRect();
-      if (rect.top < window.innerHeight * 0.9) {
-        el.classList.add('visible');
-      }
-    });
-  }
-  window.addEventListener('scroll', onScrollAnimate);
-  window.addEventListener('load', onScrollAnimate);
-
-  // Placeholder para botón conectar TronLink Wallet
-  document.getElementById('btnConnect').addEventListener('click', () => {
-    alert('Aquí se integrará la conexión con TronLink Wallet para procesar la compra.');
-  });
-</script>
-
+  <footer>
+    <p>© 2025 LinknRed. Todos los derechos reservados.</p>
+  </footer>
 </body>
 </html>
