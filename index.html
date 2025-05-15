@@ -1,147 +1,257 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>LinknRed | Membresía NFT 2025</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
-  <style>
-    body {
-      font-family: 'Inter', sans-serif;
-      margin: 0; background-color: #f9f9f9; color: #1a1a1a;
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>LinknRed | Membresía NFT 2025</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
+<style>
+  /* Reset y básicos */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body {
+    font-family: 'Inter', sans-serif;
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    color: #f0f0f0;
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  a {
+    color: #ff3b3f;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  a:hover {
+    color: #ff6468;
+  }
+
+  /* Contenedor central */
+  .container {
+    max-width: 960px;
+    margin: auto;
+    padding: 2rem 1rem;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* Header */
+  header {
+    text-align: center;
+    margin-bottom: 2rem;
+    animation: fadeInDown 1s ease forwards;
+  }
+  header h1 {
+    font-size: 3rem;
+    font-weight: 800;
+    color: #ff3b3f;
+    letter-spacing: 2px;
+    margin-bottom: 0.25rem;
+  }
+  header p {
+    font-weight: 600;
+    font-size: 1.15rem;
+    color: #f0f0f0cc;
+  }
+
+  /* Hero Section */
+  .hero {
+    background: #1a1a1a33;
+    border-radius: 16px;
+    padding: 2rem;
+    text-align: center;
+    box-shadow: 0 8px 24px rgba(255, 59, 63, 0.25);
+    margin-bottom: 2rem;
+    animation: fadeInUp 1.2s ease forwards;
+  }
+  .hero img {
+    max-width: 180px;
+    margin-bottom: 1rem;
+    filter: drop-shadow(0 0 4px #ff3b3f88);
+  }
+  .hero p {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+    color: #eee;
+  }
+  .price {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: #ff3b3f;
+    margin-bottom: 1.5rem;
+    letter-spacing: 1.5px;
+  }
+  .btn-buy {
+    background: #ff3b3f;
+    color: #fff;
+    font-weight: 700;
+    padding: 1rem 2.5rem;
+    border: none;
+    border-radius: 50px;
+    font-size: 1.3rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    box-shadow: 0 4px 15px #ff3b3fcc;
+  }
+  .btn-buy:hover {
+    background: #ff6165;
+    box-shadow: 0 6px 20px #ff6165dd;
+  }
+
+  /* Features Section */
+  .features {
+    background: #121212cc;
+    border-radius: 16px;
+    padding: 2rem;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.6);
+    animation: fadeIn 1.5s ease forwards;
+  }
+  .features h2 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    font-weight: 700;
+    color: #ff3b3f;
+    letter-spacing: 1px;
+  }
+  .features ul {
+    list-style: none;
+    max-width: 700px;
+    margin: auto;
+  }
+  .features li {
+    padding: 1rem 1.5rem;
+    border-radius: 12px;
+    background: #222;
+    margin-bottom: 1rem;
+    font-weight: 600;
+    box-shadow: inset 2px 2px 8px #ff3b3f44;
+    transition: background 0.3s ease;
+  }
+  .features li:hover {
+    background: #ff3b3f22;
+    color: #ff3b3f;
+  }
+
+  /* Footer */
+  footer {
+    background: #0c0c0c;
+    color: #888;
+    text-align: center;
+    padding: 1.5rem 1rem;
+    font-size: 0.9rem;
+    user-select: none;
+  }
+  footer p {
+    margin-bottom: 0.5rem;
+  }
+  footer a {
+    margin: 0 0.7rem;
+    color: #ff3b3faa;
+  }
+  footer a:hover {
+    color: #ff3b3f;
+  }
+
+  /* Animaciones */
+  @keyframes fadeInDown {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
     }
-    header {
-      background-color: #fff; padding: 2rem; text-align: center; border-bottom: 1px solid #e0e0e0;
+    to {
+      opacity: 1;
+      transform: translateY(0);
     }
+  }
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  /* Responsive */
+  @media (max-width: 600px) {
     header h1 {
-      font-size: 2rem; color: #d20000;
-    }
-    .hero {
-      padding: 2rem; text-align: center; background: linear-gradient(90deg, #ffffff, #e6f0ff);
-    }
-    .hero img {
-      max-width: 180px; margin-bottom: 1rem;
-    }
-    .hero p {
-      font-size: 1.1rem; max-width: 600px; margin: 1rem auto;
+      font-size: 2.25rem;
     }
     .price {
-      font-size: 1.5rem; font-weight: bold; color: #0044cc;
+      font-size: 2rem;
     }
-    .btn {
-      display: inline-block; background-color: #d20000; color: #fff; padding: 0.8rem 1.5rem;
-      margin-top: 1.5rem; text-decoration: none; border-radius: 8px; font-weight: 600;
-      transition: background 0.3s; cursor: pointer;
-      border: none;
+    .btn-buy {
+      width: 100%;
       font-size: 1.1rem;
+      padding: 1rem 0;
     }
-    .btn:hover:not(:disabled) {
-      background-color: #a60000;
-    }
-    .btn:disabled {
-      background-color: #888;
-      cursor: not-allowed;
-    }
-    .features {
-      padding: 2rem; background-color: #fff;
-    }
-    .features h2 {
-      text-align: center; margin-bottom: 1rem;
-    }
-    .features ul {
-      list-style: none; padding: 0; max-width: 800px; margin: auto;
-    }
-    .features li {
-      background-color: #f0f4ff; margin: 0.5rem 0; padding: 1rem; border-radius: 6px;
-    }
-    footer {
-      background-color: #1a1a1a; color: #fff; text-align: center; padding: 2rem;
-    }
-    footer a {
-      color: #fff; margin: 0 0.5rem; text-decoration: none;
-    }
-    #walletAddress {
-      margin-top: 1rem; font-weight: 600; color: #333;
-    }
-  </style>
+  }
+</style>
 </head>
 <body>
-  <header>
-    <h1>LinknRed | Membresía NFT 2025</h1>
-  </header>
+  <div class="container">
+    <header>
+      <h1>LinknRed | Membresía NFT 2025</h1>
+      <p>Únete al ecosistema colaborativo de LinknRed y potencia tu comercio P2P con tecnología blockchain.</p>
+    </header>
 
-  <section class="hero">
-    <img src="https://gateway.btfs.io/btfs/Qma4Y61W4EiSqaFzcwdSWhgoh1Zv3YgSk6cTgUkzTSjza8" alt="Logo LinknRed" />
-    <p>Únete al ecosistema colaborativo de LinknRed con esta membresía NFT válida por 12 meses. Una red empresarial que impulsa el comercio electrónico P2P con pagos en <strong>$TRX</strong> a través de <strong>TronLink Wallet</strong>, sin intermediarios comerciales ni económicos.</p>
-    <p class="price">600 USDT / anual</p>
-    
-    <button id="connectWalletBtn" class="btn">Conectar TronLink Wallet</button>
-    <div id="walletAddress"></div>
+    <section class="hero" role="region" aria-label="Información de la membresía NFT">
+      <img src="https://gateway.btfs.io/btfs/Qma4Y61W4EiSqaFzcwdSWhgoh1Zv3YgSk6cTgUkzTSjza8" alt="Logo LinknRed" />
+      <p>
+        Esta membresía NFT te da acceso por 12 meses al ecosistema colaborativo de <strong>LinknRed</strong>, una red empresarial que vende, compra y colabora dentro de una plataforma robusta de comercio electrónico P2P.
+      </p>
+      <p>
+        LinknRed es un comercio <strong>P2P</strong> que usa <strong>TronLink Wallet</strong> para pagos con <strong>$TRX (TRC-10)</strong>, sin intermediación comercial ni económica.
+      </p>
+      <p>
+        Tendrás tu tienda en línea personalizada: <a href="https://www.linknred.com/tuempresa" target="_blank" rel="noopener">www.linknred.com/tuempresa</a>, donde podrás integrar productos y conectar con clientes y aliados.
+      </p>
+      <p class="price" aria-label="Precio anual de la membresía NFT">600 USDT / anual</p>
+      <button class="btn-buy" aria-label="Comprar membresía NFT">Comprar Membresía NFT</button>
+    </section>
 
-    <button id="buyNFTBtn" class="btn" style="display:none; margin-left:1rem;">Comprar Membresía NFT</button>
-  </section>
-
-  <section class="features">
-    <h2>¿Qué incluye tu membresía?</h2>
-    <ul>
-      <li>Tu tienda en línea personalizada: www.linknred.com/tuempresa</li>
-      <li>Integración de productos y catálogo</li>
-      <li>Conexión con nuevos clientes y aliados</li>
-      <li>Soporte técnico, mantenimiento y promoción digital</li>
-      <li>Validación por NFT en blockchain</li>
-    </ul>
-  </section>
+    <section class="features" role="region" aria-label="Características de la membresía NFT">
+      <h2>¿Qué incluye tu membresía?</h2>
+      <ul>
+        <li>Tu tienda en línea personalizada: www.linknred.com/tuempresa</li>
+        <li>Integración completa de productos y catálogo</li>
+        <li>Conexión directa con nuevos clientes y aliados</li>
+        <li>Soporte técnico, mantenimiento y promoción digital</li>
+        <li>Validación segura por NFT en blockchain</li>
+      </ul>
+    </section>
+  </div>
 
   <footer>
-    <p>Contacto: javier.garza@ennovasol.com | WhatsApp MX: +52 8119856473 | ES: +34 684469794</p>
+    <p>Contacto: <a href="mailto:javier.garza@ennovasol.com">javier.garza@ennovasol.com</a> | WhatsApp MX: +52 8119856473 | ES: +34 684469794</p>
     <p>
-      <a href="https://x.com/linknred" target="_blank">X</a>
-      <a href="https://facebook.com/linknred" target="_blank">Facebook</a>
-      <a href="https://instagram.com/linknred" target="_blank">Instagram</a>
-      <a href="https://linkedin.com/company/linknred" target="_blank">LinkedIn</a>
-      <a href="https://t.me/linknred" target="_blank">Telegram</a>
+      <a href="https://x.com/linknred" target="_blank" rel="noopener">X</a>
+      <a href="https://facebook.com/linknred" target="_blank" rel="noopener">Facebook</a>
+      <a href="https://instagram.com/linknred" target="_blank" rel="noopener">Instagram</a>
+      <a href="https://linkedin.com/company/linknred" target="_blank" rel="noopener">LinkedIn</a>
     </p>
+    <p>© 2025 LinknRed by Ennovasol. Todos los derechos reservados.</p>
   </footer>
 
-  <script src="https://cdn.jsdelivr.net/npm/tronweb/dist/TronWeb.js"></script>
   <script>
-    const connectWalletBtn = document.getElementById('connectWalletBtn');
-    const buyNFTBtn = document.getElementById('buyNFTBtn');
-    const walletAddressDiv = document.getElementById('walletAddress');
-
-    let tronWeb;
-    let userAddress;
-
-    async function checkTronLink() {
-      if (window.tronWeb && window.tronWeb.ready) {
-        tronWeb = window.tronWeb;
-        return true;
-      }
-      return false;
-    }
-
-    async function connectWallet() {
-      if (!(await checkTronLink())) {
-        alert('Por favor instala TronLink Wallet y conéctate.');
-        return;
-      }
-      try {
-        const address = await tronWeb.request({ method: 'tron_requestAccounts' });
-        userAddress = address[0];
-        walletAddressDiv.textContent = `Wallet conectada: ${userAddress}`;
-        connectWalletBtn.textContent = 'Wallet conectada';
-        connectWalletBtn.disabled = true;
-        buyNFTBtn.style.display = 'inline-block';
-      } catch (error) {
-        console.error('Error conectando TronLink:', error);
-      }
-    }
-
-    connectWalletBtn.addEventListener('click', connectWallet);
-
-    buyNFTBtn.addEventListener('click', () => {
-      alert('Aquí se integrará la función de compra NFT.');
-      // Aquí llamaremos a la función smart contract una vez la tengas lista
+    // Aquí puedes agregar la integración con TronLink después
+    document.querySelector('.btn-buy').addEventListener('click', () => {
+      alert('Aquí se integrará la compra con TronLink y la generación del NFT.');
     });
   </script>
 </body>
